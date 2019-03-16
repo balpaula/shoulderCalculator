@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    border: 3px solid 	#99b5c3;
+    border-radius: 15px;
+    padding: 50px 100px;
+    line-height: 26px;
+    background-color: #f4f7f9; 
+    width: 475px;
+}
+
+form p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.normalizedStrength {
+    font-size: 24px;
+    font-weight: bold;
+}

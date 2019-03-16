@@ -1,0 +1,20 @@
+<div class="container">
+  <app-menu></app-menu>
+  <div class="scrollable">
+    <div (click)="handleClickCalculator1()">
+      <p>Calculator 1</p>
+    </div>
+    <div (click)="handleClickCalculator2()">
+      <p>Calculator 2</p>
+    </div>
+    <div *ngIf="!showCalculator1 && !showCalculator2">
+      <h1>What do you want to do?</h1>
+      <h2>Calculator 1</h2>
+      <p>I want to calculate the whole Constant Score of my patient, with normalized strength within it</p>
+      <h2>Calculator 2</h2>
+      <p>I just want to calculate the normalized strength value</p>
+    </div>
+    <app-calculator1 *ngIf="showCalculator1"></app-calculator1>
+    <app-calculator2 *ngIf="showCalculator2"></app-calculator2>
+  </div>
+</div>

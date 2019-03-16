@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-container {
+    height: 100vh;
+    width: calc(100% - 280px);
+    text-align: justify;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.text-container a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #4c7e97;
+}
+
+.text-container a:hover {
+    color: #99b5c3;
+}
+
+app-menu {
+    width: 280px;
+}

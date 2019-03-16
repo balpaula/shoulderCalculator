@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Lato', sans-serif;
+}
+
+.scrollable {
+    height: 100vh;
+    width: calc(100% - 280px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+app-menu {
+    width: 280px;
+}
+

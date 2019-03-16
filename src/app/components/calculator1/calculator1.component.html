@@ -1,0 +1,83 @@
+<div class="container">
+  <form (ngSubmit)="submitForm(calculator1)" #myForm="ngForm">
+    <p> Pain </p>
+    <div class="form-item">
+      <input type="radio" name="pain" value="15" [(ngModel)]="pain" /> None<br>
+      <input type="radio" name="pain" value="10" [(ngModel)]="pain" /> Mild<br>
+      <input type="radio" name="pain" value="5" [(ngModel)]="pain" /> Moderate<br>
+      <input type="radio" name="pain" value="0" [(ngModel)]="pain" required /> Severe<br>
+    </div>
+    <hr>
+    <p> Daily Activities (check ALL that apply)</p>
+    <div class="form-item">
+      <input type="checkbox" name="work" value="4" [(ngModel)]="work" /> Normal work activity<br>
+      <input type="checkbox" name="sportRecreation" value="4" [(ngModel)]="sportRecreation" /> Normal sport/recreation activity<br>
+      <input type="checkbox" name="sleep" value="2" [(ngModel)]="sleep" /> Normal sleep activity<br>
+    </div>
+    <p> Arm Positioning </p>
+    <div class="form-item">
+      <input type="radio" name="positioning" value="2" [(ngModel)]="positioning" required /> Up to Waist<br>
+      <input type="radio" name="positioning" value="4" [(ngModel)]="positioning" /> Up to Xiphoid<br>
+      <input type="radio" name="positioning" value="6" [(ngModel)]="positioning" /> Up to Neck<br>
+      <input type="radio" name="positioning" value="8" [(ngModel)]="positioning" /> Up to Top of Head<br>
+      <input type="radio" name="positioning" value="10" [(ngModel)]="positioning" /> Above Head<br>
+    </div>
+    <hr>
+    <p> Movement</p>
+      <p>Anterior Flexion </p>
+      <div class="form-item">
+        <input type="radio" name="anteriorFlexion" value="0" [(ngModel)]="anteriorFlexion" required /> 0-30 degrees<br>
+        <input type="radio" name="anteriorFlexion" value="2" [(ngModel)]="anteriorFlexion" /> 31-60 degrees<br>
+        <input type="radio" name="anteriorFlexion" value="4" [(ngModel)]="anteriorFlexion" /> 61-90 degrees<br>
+        <input type="radio" name="anteriorFlexion" value="6" [(ngModel)]="anteriorFlexion" /> 91-120 degrees<br>
+        <input type="radio" name="anteriorFlexion" value="8" [(ngModel)]="anteriorFlexion" /> 121-150 degrees<br>
+        <input type="radio" name="anteriorFlexion" value="10" [(ngModel)]="anteriorFlexion" /> 151-180 degrees<br>
+      </div>
+      <p>Abduction</p>
+      <div class="form-item">
+        <input type="radio" name="abduction" value="0" [(ngModel)]="abduction" required /> 0-30 degrees<br>
+        <input type="radio" name="abduction" value="2" [(ngModel)]="abduction" /> 31-60 degrees<br>
+        <input type="radio" name="abduction" value="4" [(ngModel)]="abduction" /> 61-90 degrees<br>
+        <input type="radio" name="abduction" value="6" [(ngModel)]="abduction" /> 91-120 degrees<br>
+        <input type="radio" name="abduction" value="8" [(ngModel)]="abduction" /> 121-150 degrees<br>
+        <input type="radio" name="abduction" value="10" [(ngModel)]="abduction" /> 151-180 degrees<br>
+      </div>
+      <p>External Rotation (check ALL that apply)</p>
+      <div class="form-item">
+        <input type="checkbox" name="externalRotation1" value="2" [(ngModel)]="externalRotation1" /> Hand behind Head, Elbow forward<br>
+        <input type="checkbox" name="externalRotation2" value="2" [(ngModel)]="externalRotation2" /> Hand behind Head, Elbow back<br>
+        <input type="checkbox" name="externalRotation3" value="2" [(ngModel)]="externalRotation3" /> Hand to top of Head, Elbow forward<br>
+        <input type="checkbox" name="externalRotation4" value="2" [(ngModel)]="externalRotation4" /> Hand to top of Head, Elbow back<br>
+        <input type="checkbox" name="externalRotation5" value="2" [(ngModel)]="externalRotation5" /> Full Elevation from top of Head<br>
+      </div>
+      <p>Internal Rotation</p>
+      <div class="form-item">
+        <input type="radio" name="internalRotation" value="0" [(ngModel)]="internalRotation" required /> Back of the hand to Lateral Thigh<br>
+        <input type="radio" name="internalRotation" value="2" [(ngModel)]="internalRotation" /> Back of the hand to Buttock<br>
+        <input type="radio" name="internalRotation" value="4" [(ngModel)]="internalRotation" /> Back of the hand to Lumbosacral Junction<br>
+        <input type="radio" name="internalRotation" value="6" [(ngModel)]="internalRotation" /> Back of the hand to Waist (L3 Lumbar)<br>
+        <input type="radio" name="internalRotation" value="8" [(ngModel)]="internalRotation" /> Back of the hand to T12 Vertebra<br>
+        <input type="radio" name="internalRotation" value="10" [(ngModel)]="internalRotation" /> Back of the hand to Interscapular region (T7)<br>
+      </div>
+    <hr>
+    <p>Strength</p>
+      <p> Age </p>
+      <div class="form-item">
+        <input type="number" name="age" [(ngModel)]="age" min="0" max="125" required />
+      </div>
+      <p> Gender </p>
+      <div class="form-item">
+        <input type="radio" name="gender" value="male" [(ngModel)]="gender" required /> Male<br>
+        <input type="radio" name="gender" value="female" [(ngModel)]="gender" /> Female<br>
+      </div>
+      <p> Measured Raw Strength</p>
+      <div class="form-item">
+        <input type="radio" name="strengthUnits" value="pounds" [(ngModel)]="strengthUnits" required /> pounds <br>
+        <input type="radio" name="strengthUnits" value="kg" [(ngModel)]="strengthUnits" /> kg <br>
+        <input type="number" name="strength" [(ngModel)]="strength" min="0" required />
+      </div>
+    <button type="submit"> Get the Constant Score </button>
+  </form>
+  <p>Your patient strength normalized Constant Score is</p>
+  <p class="constantScore">{{ constantScoreRounded }}</p>
+</div>

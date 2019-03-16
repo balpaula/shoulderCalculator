@@ -1,0 +1,24 @@
+<div class="container">
+  <form (ngSubmit)="submitForm(calculator2)" #myForm="ngForm">
+    <p> Age</p>
+    <div class="form-item">
+      <input type="number" name="age" [(ngModel)]="age" min="0" max="125" required />
+    </div>
+    <p> Gender </p>
+    <div class="form-item">
+      <input type="radio" name="gender" value="male" [(ngModel)]="gender" required /> Male<br>
+      <input type="radio" name="gender" value="female" [(ngModel)]="gender" /> Female<br>
+    </div>
+    <p> Measured Raw Strength</p>
+    <div class="form-item">
+      <input type="radio" name="strengthUnits" value="pounds" [(ngModel)]="strengthUnits" required /> pounds <br>
+      <input type="radio" name="strengthUnits" value="kg" [(ngModel)]="strengthUnits" /> kg <br>
+      <input type="number" name="strength" [(ngModel)]="strength" min="0" required />
+    </div>
+  
+    <button type="submit"> Get the normalized strength </button>
+  </form>
+  
+  <p>Your patient normalized strength is</p>
+  <p class="normalizedStrength">{{ normalizedStrengthRounded }}</p>
+</div>
